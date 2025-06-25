@@ -1,44 +1,54 @@
-# Go Code Organizer - Documentation
+# Go Code Organizer
+
+**Professional Go code organization tool with smart comment cleanup**
+
+[![Made by GeekTech](https://img.shields.io/badge/Made%20by-GeekTech-blue?style=flat-square)](https://geektech.id)
+[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
+[![Go](https://img.shields.io/badge/Go-1.18+-00ADD8?style=flat-square&logo=go)](https://golang.org)
+
+---
 
 ## Overview
 
-Go Code Organizer adalah script bash yang powerful untuk menata ulang struktur file Go sesuai dengan standar coding yang optimal. Script ini tidak hanya mengorganisir kode, tetapi juga membersihkan code examples dalam komentar dan trailing comments yang tidak perlu.
+Go Code Organizer is a powerful bash script designed to restructure Go files according to optimal coding standards. Beyond simple organization, it intelligently detects and removes code examples from comments while cleaning up unnecessary trailing comments, resulting in production-ready, clean code.
+
+**Developed by [GeekTech](https://geektech.id) - Empowering developers with professional tools.**
 
 ## ✨ Key Features
 
 ### 🗑️ Smart Comment Cleaning
-- **Code Example Detection**: Otomatis mendeteksi dan menghapus blok komentar yang berisi contoh kode
-- **Trailing Comment Cleanup**: Membersihkan komentar dan whitespace berlebih di akhir file
-- **License Header Preservation**: Mempertahankan header lisensi dan dokumentasi penting
+- **Code Example Detection**: Automatically detects and removes comment blocks containing code snippets
+- **Trailing Comment Cleanup**: Removes unnecessary comments and excessive whitespace at file endings
+- **License Header Preservation**: Maintains important license headers and documentation
 
 ### 📋 Perfect Code Organization
-Script mengorganisir kode Go dalam urutan yang optimal:
-1. **License Header** - Header lisensi atau copyright
-2. **Package Declaration** - Deklarasi package
+The script organizes Go code in optimal order:
+1. **License Header** - Copyright and license information
+2. **Package Declaration** - Package statement
 3. **Imports** - Import statements
-4. **Constants** - Konstanta
-5. **Variables** - Variabel global
-6. **Types** - Type definitions (struct, interface, dll)
-7. **Init & Main Functions** - Functions init() dan main()
-8. **Controller Constructors** - Constructor functions untuk controller
-9. **ControllerRegistry Constructors** - Constructor untuk registry
-10. **ControllerRegistry Methods** - Method untuk registry
-11. **Controller Public Methods** - Method public controller
-12. **Controller Private Methods** - Method private controller
+4. **Constants** - Constant declarations
+5. **Variables** - Global variables
+6. **Types** - Type definitions (struct, interface, etc.)
+7. **Init & Main Functions** - init() and main() functions
+8. **Controller Constructors** - Constructor functions for controllers
+9. **ControllerRegistry Constructors** - Registry constructors
+10. **ControllerRegistry Methods** - Registry methods
+11. **Controller Public Methods** - Public controller methods
+12. **Controller Private Methods** - Private controller methods
 
 ### 🛡️ Safety Features
-- **Backup System**: Opsi untuk membuat backup otomatis
-- **Interactive Prompts**: Konfirmasi sebelum melakukan perubahan
-- **Error Handling**: Penanganan error yang robust
+- **Backup System**: Optional automatic backup creation
+- **Interactive Prompts**: Confirmation before making changes
+- **Error Handling**: Robust error handling and validation
 
 ## 🚀 Installation
 
-1. Download script `organizer.sh`
-2. Berikan permission execute:
+1. Download the `organizer.sh` script
+2. Make it executable:
    ```bash
    chmod +x organizer.sh
    ```
-3. Pastikan Python 3 terinstall (diperlukan untuk parsing kode)
+3. Ensure Python 3 is installed (required for code parsing)
 
 ## 📖 Usage
 
@@ -78,7 +88,7 @@ Script mengorganisir kode Go dalam urutan yang optimal:
 
 ### Interactive Mode
 
-Jika dijalankan tanpa parameter, script akan menampilkan help:
+Run without parameters to see help:
 
 ```bash
 ./organizer.sh
@@ -99,7 +109,7 @@ Jika dijalankan tanpa parameter, script akan menampilkan help:
 
 ### Code Example Detection
 
-Script menggunakan algoritma cerdas untuk mendeteksi code examples dalam komentar:
+The script uses intelligent algorithms to detect code examples in comments:
 
 ```go
 /*
@@ -123,10 +133,10 @@ func main() {
 
 ### Trailing Comment Cleanup
 
-Membersihkan akhir file dari:
-- Komentar yang tidak perlu di akhir file
-- Whitespace berlebihan
-- Multi-line comment endings yang menggantung
+Cleans file endings from:
+- Unnecessary comments at end of files
+- Excessive whitespace
+- Hanging multi-line comment endings
 
 **Before:**
 ```go
@@ -153,7 +163,7 @@ func main() {
 
 ### License Header Management
 
-Otomatis mendeteksi dan mempertahankan license headers yang ada, atau menambahkan header Nucleus Go jika diminta:
+Automatically detects and preserves existing license headers, or adds Nucleus Go header when requested:
 
 ```go
 /**
@@ -231,7 +241,7 @@ func (c *UserController) GetUser() {
 ## 🛡️ Backup System
 
 ### Interactive Backup Prompt
-Saat menjalankan script, Anda akan ditanya tentang backup:
+When running the script, you'll be prompted about backups:
 
 ```
 🛡️  BACKUP OPTIONS:
@@ -248,15 +258,15 @@ Create backup files? (Y/n/c):
 ```
 
 ### Backup Files
-Jika backup diaktifkan, file asli akan disimpan dengan ekstensi `.backup`:
+When backups are enabled, original files are saved with `.backup` extension:
 - `main.go` → `main.go.backup`
 - `controller.go` → `controller.go.backup`
 
 ## 🔧 Technical Requirements
 
 - **Bash**: Unix/Linux shell environment
-- **Python 3**: Untuk parsing dan analisis kode Go
-- **gofmt** (optional): Untuk formatting otomatis setelah reorganisasi
+- **Python 3**: For code parsing and analysis
+- **gofmt** (optional): For automatic formatting after reorganization
 
 ## 📊 Performance & Results
 
@@ -350,6 +360,16 @@ Run script without arguments to see help:
 ./organizer.sh
 ```
 
+## 🤝 Contributing
+
+We welcome contributions! Please feel free to submit issues, feature requests, or pull requests.
+
+Visit [GeekTech](https://geektech.id) for more professional development tools and resources.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 ## 🔮 Future Enhancements
 
 - Support for custom organization rules
@@ -360,4 +380,6 @@ Run script without arguments to see help:
 
 ---
 
-**Made with ❤️ for Go developers who love clean, organized code!**
+**Created with ❤️ by [GeekTech](https://geektech.id) - Empowering developers worldwide with professional tools and solutions.**
+
+*For more awesome developer tools and resources, visit [geektech.id](https://geektech.id)*
